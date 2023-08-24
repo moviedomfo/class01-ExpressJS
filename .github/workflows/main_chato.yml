@@ -8,6 +8,10 @@ on:
     branches:
       - main
   workflow_dispatch:
+env:
+    APP_NAME : 'Express class  01'
+    APP_AUTHOR : moviedo@gmail.com
+    APP_VERSION : 2
 
 jobs:
   build:
@@ -26,7 +30,7 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-
+          
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
