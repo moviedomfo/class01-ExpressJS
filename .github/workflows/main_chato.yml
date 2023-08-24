@@ -62,4 +62,4 @@ jobs:
           app-name: 'chato'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8776330097E9419EBD4B0DDD22C43E6C }}
-          package: $(Agent.TempDirectory)/node-app 
+          package: .
