@@ -35,6 +35,7 @@ jobs:
           mkdir deployment
           cp -r dist deployment/
           cp -r node_modules deployment/
+          cp package.json deployment/
           
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
