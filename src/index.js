@@ -8,7 +8,7 @@ import helmet from 'helmet';
 import productApi from "./controllers/product.controller";
 require("dotenv").config();
 const app = express();
-const PORT = process.env.APP_PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // disable cache
 app.use((req, res, next) => {
