@@ -18,9 +18,9 @@ router.get(
 router.get(
   "/:id",
   asyncHandler(async (req, res) => {
-    const id = req.params.id;
+    const id = parseInt(req.params.id);
 
-    const result = products;
+    const result = products.productos.find(p => p.id === id);
 
     res.send(result);
   })

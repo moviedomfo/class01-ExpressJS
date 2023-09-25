@@ -23,15 +23,6 @@ app.use(cors());
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 
-// use logger
-// app.use(
-//   morgan(
-//     "[from: :remote-addr] [:date[iso]] [endpoint: :method :url] [status: :status] [content-length: :res[content-length]] [elapsed: :total-time ms] [agent: :user-agent]",
-//     {
-//       stream: fs.createWriteStream("./logs/server.log", { flags: "a" }),
-//     }
-//   )
-// );
 
 
 app.use(morgan("dev"));
