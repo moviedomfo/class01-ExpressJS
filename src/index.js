@@ -36,9 +36,9 @@ app.use(helmet());
 
 app.use('/api/products', productApi);
 
-app.get("/health", (req, res) => {
+app.get("/health", (_req, res) => {
   const response = {
-    //version: packageJson.version,
+    version: packageJson.version,
     appName: process.env.APP_NAME 
   };
   res.send(response);
